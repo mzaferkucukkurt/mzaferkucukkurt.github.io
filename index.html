@@ -1,78 +1,122 @@
 <!DOCTYPE html>
-<!-- Created with iSpring --><!-- 1022 644 --><!--version 9.0.0.25046 --><!--type html --><!--mainFolder ./ -->
-<html style=background-color:#635f5c;>
+<html lang="tr">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="msapplication-tap-highlight" content="no"/><title>Örnek Slayt</title><link rel="apple-touch-icon-precomposed" href="data/apple-touch-icon.png"/><link rel="shortcut icon" type="image/ico" href="data/favicon.ico"/><style>body {background-color:#635f5c;}#spr0_a362ea {display:none;}</style>
-    
-    
-    <style>
-		#playerView {
-			position:relative;
-			-webkit-tap-highlight-color:rgba(0,0,0,0);
-			-webkit-user-select:none;
-			-moz-user-select:none;
-			-webkit-touch-callout:none;
-			-webkit-user-drag:none;
-		}
-		#playerView * {
-			position:absolute;
-		}
-		#preloader {
-			width: 50px;
-			height: 50px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			border-radius: 10px;
-			background-color: rgba(0, 0, 0, 0.5);
-		}
 
-		#preloader::after {
-			content: '';
-			position: absolute;
-			background: url(data:image/png;base64,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UmVhZHlxyWU8AAADcmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwNjcgNzkuMTU3NzQ3LCAyMDE1LzAzLzMwLTIzOjQwOjQyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmFjOGVjNDFhLTZkYWItODQ0Ni04YzkzLWU1Mjk3N2YwMmE4NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFRThCNzU3NDYzNjcxMUU1QTZDRUE5NTVGOUJGQ0E3MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFRThCNzU3MzYzNjcxMUU1QTZDRUE5NTVGOUJGQ0E3MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OWFlZmI1OC00ZWFmLWQ3NDgtYTI0ZS0zNmNhNGQ2M2QwNTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0MwQkFBM0M2MjAxMTFFNUI4QjBERTk4MjY5MjQwQjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6MGSVVAAAE3klEQVR42uycW4hWVRiG15Q4eYzGQySSQlriEQ9BF2mE4iSdESRRIb0RD+mNmHgICjqQEGUe6sqgCy1i0iRinAzELrooQhHLGQURUTzMiM7omCLj+/F/czX/t/890z6s9e/3hZcZ1l6z19r7mXXca62arq4uR/mjh/gKCIQiEAKhCIRAKAIhEIpACIQiEIpACIQiEAKhCIRAKAIhEMoX9Yu62NbWxjcUobq6OpaQQpcQz/QwPBOeDU+Fx8Oj4UfhoRrnJnwDvgC3wCfgY/Bf8P0QHrImahmQB1VWLfwGvAieqy+/LxJIR+Dv4QPwf75WWb4CGQavg9fo70mqFd4F79DfCSRCA+HN8Hp4cMppdcBfwB/Bt9mo99Sr8Cl4SwYwnKYhaf2jaXMconoE/hL+CR6TQ/pPato7NS+FbtSfgH+Gp8eMfwv+HT6qpakZvqzVT/d//ePw0/BEeI72ygbFvP/f8MvwpSK2IfLSGuGxFeJ1aby98CG4s5fpDNAqaTlcL89cIf45jddcpDZknI4PKsFo0NKzQLusnX1Iq1P/doHe60CF+GM1b+OK0obIYO5XeGREnLPwfHghfDzBtOVeb+q9z0bEG6njltHVDqQ2RuP9HTwDbkoxH02axv4YjX1tNQP5LKIBl7ZiK/yWToGkLUljsaZpNaTTNc9VCeR1eHUEjHfgD3OoQiXNVRFQVmveqwrIEHh3xPXNOp2Rl77WPFiSvA+tJiCb4FHGNanHP/FggCp52Gdck7y/Wy0Dw2Hatx9s9KZmZNRmxC3JMjh8qsy1Du0St4Y+DomaKFzlEQxRu+apnOQZ1oVeZfWPeMCGlLu2/6dL3BDRwPcPGYiMjocbvaoPnL963+h1DddnChbIMiP8cMIj8KQln34be/lM3gOREW69cW2v81/fGOH1aY7e0wTyrNGYyxT6wQCAHNS8lmvcZ4UIZL4RLt8z7gQA5I7mtZyeCxHIS0b4UReOrLw+EyIQqxScDAiIldcJIQLZYTTmvwUEpMUIHxMikB/gta40PXIF/lwHVrcCAnLVCH8srQR9X7mYt2RUbq1yrOFia390N9SReugaYoR3EEg+GmGEtxNIPhpvhJ8nkHw02Qj/l0Dy0Rwj/DSBZC9ZeD3buPYHgWSv11z5RdrSw/qTQLLX20Z4o0toSxyBxJdsKrVmq79NM2ECKa/3XPltC9fgXwgkW81zpVX35fSVS3HahEB6SqZK9hjXujeJOgLJTrLG19qos1OrLALJSLL+eLFx7SL8cRaZIJCSVrrSfnVL8qHtJoFkoy3ablibQeWz849ZZaZfgUHIfg/Z97EkIs5xLR2OQNLv2u5x0Ttt5UShV1wfj91glRVP01xp8UVTBRiyuOFFheJYQpKVzNrKwQErXPyDA2SF+5k8MhsykCnwPdfzaA3ZYy6nREyCX4Cfd/EPs+nV0RoEUlqWsx1eCie9Bkc2nW5wOa87Dg3Ipy75bWXntSd1yIcHDK1RT3KzTIcOBif6AqOo3d42HX/I0tZW3zIXWgnp68chmfaQjZxyoKac0bXNRxghlpCN2m1dpj/btXEfpD0uqYaua89Luq3dx8TKN3AeE1vt4mLrAohACIQiEAKhCIRAKAIhEIpACq7IqROKJYRA+AoIhCIQAqEIhEAoAiEQikCKrQcCDABHPgH2w7NQdAAAAABJRU5ErkJggg==);
-			background-size: cover;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			animation: preloader_spin 1s infinite linear;
-			-webkit-animation: preloader_spin 1s infinite linear;
-		}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-		@keyframes preloader_spin { 0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);} }
-		@-webkit-keyframes preloader_spin { 0% {-webkit-transform: rotate(0deg);} 100% {-webkit-transform: rotate(360deg);}}
-    </style>
+  <title>Mustafa Zafer Küçükkurt - Özel Hukuk Ödev Slaytları</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<div id="preloader"></div>
-	<script src="data/browsersupport.js?E665CF84"></script>
-	<script src="data/player.js?E665CF84"></script>
-    <div id="content"></div>
-    <div id="spr0_a362ea"></div>
-    <script>
-		(function(startup){
-			function start(savedPresentationState)
-			{
-				var presInfo = "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";
-				PresentationPlayer.start(presInfo, "content", "playerView", onPlayerInit, savedPresentationState);
-				function onPlayerInit(player)
-				{
-					(player);
 
-					var preloader = document.getElementById("preloader");
-					preloader.parentNode.removeChild(preloader);
-				}
-			}
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mustafa Zafer Küçükkurt</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+		  <li class="nav-item active">
+            <a class="nav-link" href="/sunumlar.html">Sunumlar</a>
+          </li>
 
-			if (startup)
-				startup(start);
-			else
-				start();
-		})();
-    </script>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">FSMVÜ Özel Hukuk Tezli Yüksek Lisans Ödev Sunumları</h1>
+      <p class="lead">Bu sayfada tarafımca hazırlanan ödevlerin sunumları yer almaktadır. Sunumlar şifreli olduğu için sunum şifresi almanız gerekmektedir. Sunumların şifreleri aynıdır</p>
+      <a href="mailto:m.kucukkurt@stu.fsm.edu.tr" class="btn btn-primary btn-lg">Şifre Al</a>
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Anonim Şirketlerde YK Üyelerinin Hukuki Sorumluluğu</h4>
+            <p class="card-text">2019-2020 Güz Dönemi "Anonim Şirketler Hukukunda Güncel Gelişmeler" dersinde yaptığım sunumdur.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/anonim-sirketlerde-yk-uyelerinin-hukuki-sorumlulugu" class="btn btn-primary">Tıklayınız!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Kripto Paraların Ticaret Şirketlerine Sermaye Olarak Getirilmesi</h4>
+            <p class="card-text">2019-2020 Bahar Dönemi "Limited Şirketler Hukukunda Güncel Gelişmeler" dersinde yaptığım sunumdur.</p>
+          </div>
+          <div class="card-footer">
+            <a href="kripto-paralarin-ticaret-sirketlerine-sermaye-olarak-getirilmesi" class="btn btn-primary">Tıklayınız!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Garanti Sözleşmeleri</h4>
+            <p class="card-text">2019-2020 Bahar Dönemi "Teminat Sözleşmeleri" dersinde yaptığım sunumdur.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/garanti-sozlesmeleri" class="btn btn-primary">Tıklayınız!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Finansal Kiralama (Leasing) Sözleşmelerinin Sona Ermesinin Hukuki Sonuçları</h4>
+            <p class="card-text">2019-2020 Bahar Dönemi "Finansal Sözleşmeler" dersinde yaptığım sunumdur.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/finansal-kiralama-leasing-sozlesmelerinin-sona-ermesinin-hukuki-sonuclari" class="btn btn-primary">Tıklayınız!</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Mustafa Zafer Küçükkurt 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
