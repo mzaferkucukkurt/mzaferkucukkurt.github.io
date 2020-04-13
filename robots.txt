@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://mzaferkucukkurt.github.com/sitemap.txt
+Sitemap: https://mzaferkucukkurt.github.io/sitemap.xml
